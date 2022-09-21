@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Customer_ID, Customer_FirstName FROM Customer";
+$sql = "SELECT Customer_ID, Customer_FirstName, Customer_LastName, Restaurant_ID FROM Customer";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -38,6 +38,8 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["Customer_ID"]?></td>
     <td><?=$row["Customer_FirstName"]?></td>
+    <td><?=$row["Customer_LastName"]?></td>
+    <td><?=$row["Restaurant_ID"]?></td>
   </tr>
 <?php
   }
