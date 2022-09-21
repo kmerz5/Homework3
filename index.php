@@ -6,9 +6,12 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      <a class="nav-item nav-link" href="customer.php">Customer</a>
+      <a class="nav-item nav-link" href="employee.php">Employee</a>
+      <a class="nav-item nav-link" href="purchase.php">Purchase</a>
+      <a class="nav-item nav-link" href="restaurant.php">Restaurant</a>
+      <a class="nav-item nav-link" href="restaurant-employee.php">Restaurant&Employee</a>
+      
     </div>
   </div>
 </nav>
