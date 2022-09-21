@@ -10,7 +10,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Purchasee ID</th>
+      <th>Purchase ID</th>
       <th>Customer ID</th>
     </tr>
   </thead>
