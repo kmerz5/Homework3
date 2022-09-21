@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["Customer_ID"]?></td>
-    <td><a href="customer-restaurant.php?id="<?=$row["Customer_FirstName"]?>?=$row["Customer_FirstName"]?></a></td>
+    <td><a href="customer.php?id="<?=$row["Customer_FirstName"]?>?=$row["Customer_FirstName"]?></a></td>
     <td><?=$row["Customer_LastName"]?></td>
     <td><?=$row["Restaurant_ID"]?></td>
   </tr>
