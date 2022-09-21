@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["Restaurant_ID"]?></td>
     <td><?=$row["Employee_ID"]?></td>
     <td><?=$row["Employee_FirstName"]?></td>
-    <td><?=$row["Employee_LastNamee"]?></td>
+    <td><?=$row["Employee_LastName"]?></td>
   </tr>
 <?php
   }
