@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT TOP 12 RestaurantName, Employee_FirstName FROM Restaurant r JOIN Employee e ON r.Restaurant_ID=e.Restaurant_ID";
+$sql = "SELECT DISTINCT RestaurantName, Employee_FirstName FROM Restaurant r JOIN Employee e ON r.Restaurant_ID=e.Restaurant_ID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
