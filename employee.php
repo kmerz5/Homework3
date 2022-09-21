@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Restaurant_ID, Employee_ID, Employee_FirstName, Employee_LastName FROM Employee";
+$sql = "SELECT DISTINCT Restaurant_ID, Employee_ID, Employee_FirstName, Employee_LastName FROM Employee";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
