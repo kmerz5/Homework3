@@ -46,7 +46,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$cid=$_POST['id']
+$cid=$_POST['id'];
 $sql = "SELECT DISTINCT RestaurantName, Employee_FirstName FROM Restaurant r JOIN Employee e ON r.Restaurant_ID=e.Restaurant_ID where Restaurant_ID=" .$cid;
 $result = $conn->query($sql);
 
