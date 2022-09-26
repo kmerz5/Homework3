@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["RestaurantName"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "select e.Employee_FirstName from Employee e join Restaurant r on e.Restaurant_ID = r.Restaurant_ID where r.Restaurant_ID=" . $row["Restaurant_ID"];
+    $section_sql = "select e.Employee_FirstName from Employee e join Restaurant r on e.Restaurant_ID = r.Restaurant_ID where e.Restaurant_ID=" . $row["Restaurant_ID"];
     $section_result = $conn->query($section_sql);
      while($section_row = $section_result->fetch_assoc()) {
       echo "<li>" . $section_row["description"] . "</li>";
