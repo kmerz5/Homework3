@@ -34,6 +34,54 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Restaurant ID</th>
+      <th>Restaurant Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+$servername = "localhost";
+$username = "kyliemer_Homework3";
+$password = "ChunkyMonkey01!";
+$dbname = "kyliemer_Homework3";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM Restaurant";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+?>
+  <tr>
+    <td><?=$row["Restaurant_ID"]?></td>
+    <td><?=$row["RestaurantName"]?></td>
+    <td>
+      <form method="post" action="postpage.php">
+        <input type="hidden" name="id" value="<?=$row["Restaurant_ID"]?>" />
+        <input type="submit" value="Orders" />
+      </form>
+    </td>
+  </tr>
+<?php
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
+  </tbody>
+  </table>
   </body>
 </html>
 
