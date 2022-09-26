@@ -14,7 +14,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <<a class="nav-item nav-link" href="index.php">Home</a>
+      <a class="nav-item nav-link" href="index.php">Home</a>
       <a class="nav-item nav-link" href="customer.php">Customer</a>
       <a class="nav-item nav-link" href="employee.php">Employee</a>
       <a class="nav-item nav-link" href="purchase.php">Purchase</a>
