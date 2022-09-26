@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
     <td>
       <form method="post" action="postpage.php">
         <input type="hidden" name="id" value="<?=$row["Restaurant_ID"]?>" />
-        <input type="submit" value="Orders" />
+        <input type="submit" value="Employees" />
       </form>
     </td>
   </tr>
