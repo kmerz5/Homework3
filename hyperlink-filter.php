@@ -46,7 +46,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$iid = $_GET['id];
+$iid = $_GET['id'];
 $sql = "SELECT r.Restaurant_ID, r.RestaurantName FROM Restaurant r WHERE r.Restaurant_ID=".$iid;
 $result = $conn->query($sql);
 
