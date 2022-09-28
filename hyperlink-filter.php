@@ -47,7 +47,7 @@ if ($conn->connect_error) {
 }
 
 $iid = $_GET['id];
-$sql = "SELECT Restaurant_ID, RestaurantName FROM Restaurant WHERE Restaurant_ID=".$iid;
+$sql = "SELECT r.Restaurant_ID, r.RestaurantName FROM Restaurant r WHERE r.Restaurant_ID=".$iid;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
