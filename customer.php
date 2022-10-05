@@ -69,3 +69,5 @@ $conn->close();
 ?>
   </tbody>
     </table>
+    <br />
+    <a href="customer-add.php" class="btn btn-primary"> Add New<a/>
